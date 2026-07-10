@@ -55,6 +55,7 @@
   color: var(--accent-color-text);
   mix-blend-mode: difference;
   font-size: 14px;
+  font-family: var(--accent-font), monospace;
 }
 
 .floppy-icon {
@@ -299,10 +300,6 @@
   text-transform: uppercase;
 }
 
-.button__text {
-  font-family: var(--accent-font), monospace;
-}
-
 .filter-opacity {
   filter: opacity(0.1);
 }
@@ -438,7 +435,7 @@
   }
 
   .save .button__text {
-  white-space: nowrap;
+    white-space: nowrap;
   }
 
   .header {
