@@ -470,8 +470,6 @@
   }
 
   .card__buttons {
-    bottom: 25px;
-    right: 25px;
     gap: 4px;
   }
 
