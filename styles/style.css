@@ -62,12 +62,8 @@
   block-size: 22px;
   inline-size: 22px;
   display: block;
-  filter: brightness(0);
-  transition: filter 0.3s ease;
-}
-
-.save:hover .floppy-icon {
-  filter: brightness(0) invert(1);
+  color: var(--accent-color-text);
+  mix-blend-mode: difference;
 }
 
 .card__icon-button {
@@ -216,11 +212,6 @@
   font-family: var(--accent-font), monospace;
 }
 
-.heart {
-  fill: transparent;
-  stroke: none;
-}
-
 .like-icon {
   display: block;
   width: 39px;
@@ -245,7 +236,7 @@
   display: none;
   background-color: var(--background-color);
   width: 353px;
-  padding: 30px;
+  padding: 10px 30px;
   margin: auto;
   box-sizing: border-box;
   position: fixed;
@@ -275,6 +266,9 @@
   width: 39px;
   height: 39px;
   flex-shrink: 0;
+  color: var(--accent-color-text);
+  mix-blend-mode: difference;
+  margin-top: 20px;
 }
 
 .text-dialog {
@@ -298,6 +292,7 @@
   background-color: transparent;
   border: var(--outline-main);
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .filter-opacity {
@@ -382,7 +377,7 @@
   transition: fill 0.3s 0.06s linear;
 }
 
-.like-icon.is-liked .heart {
+.like-icon.is-liked {
   animation: heart-scale 0.3s 0.1s ease-in;
   transform-origin: center;
 }
@@ -405,11 +400,6 @@
   }
 
   .save .floppy-icon {
-    width: 28px;
-    height: 28px;
-  }
-
-  .floppy-dialog {
     width: 28px;
     height: 28px;
   }
@@ -467,10 +457,17 @@
   .card__text {
     width: 100%;
     padding-right: 25px;
+    padding-bottom: 0;
   }
 
   .card__buttons {
     gap: 4px;
+    margin-top: 0;
+    padding: 25px 19px 19px 0;
+  }
+
+  .text:last-child {
+    margin-bottom: 0;
   }
 
   .card__like-button {
